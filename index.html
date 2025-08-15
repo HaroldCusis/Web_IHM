@@ -1,62 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    
+    <title>Realidad Virtual, Aumentada y Sensores Físicos</title>
+    <link rel="stylesheet" href="styless.css">
 </head>
 <body>
 
-    <header>
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <a href="./index.html">Principal</a>
+        <nav class="dropdown">
+            <a href="#">Menú</a>
+            <div class="dropdown-content">
+                <a href="./Pregunta_1.html">Pregunta 1</a>
+                <a href="./Pregunta_2.html">Pregunta 2</a>
+                <a href="./Pregunta_3.html">Pregunta 3</a>
+                <a href="./Pregunta_4.html">Pregunta 4</a>
+                <a href="./Pregunta_5.html">Pregunta 5</a>
+                <a href="./Pregunta_6.html">Pregunta 6</a>
+                <a href="./Pregunta_7.html">Pregunta 7</a>
+                <a href="./Pregunta_8.html">Pregunta 8</a>
+            </div>
+        </nav>
     </header>
 
-    <h1>¿Que es la Rama?</h1>
-    <p>Realidad Virtual, aumentada y sensores fisicos.</p>
-    <h2>Integrantes</h2>
-    <p>- Daniela Delgado</p>
-    <p>- Harold Cusis</p>
-    <p>- Gabriela Lucena</p>
-    <p>- Sebastian Yépez</p>
-    <a href="/cuestionario.html">Acceder al cuestionario</a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-</body>
+    <!-- Título principal -->
+    <div class="container">
+        <h1 class="titulo-principal">Rama de la Realidad Virtual, Aumentada y Sensores Físicos</h1>
+    </div>
 
+    <!-- Integrantes -->
+    <section>
+        <h2 class="subtitulo">Integrantes</h2>
+        <div class="integrantes-grid">
+            <div class="integrante-card">Sebastian Yépez</div>
+            <div class="integrante-card">Daniela Delgado</div>
+            <div class="integrante-card">Gabriela Lucena</div>
+            <div class="integrante-card">Harold Cusis</div>
+        </div>
+    </section>
+
+    <!-- Tarjetas -->
+    <section class="cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="texto-con-boton">
+                <p class="texto-largo">
+                    La Realidad Virtual, Realidad Aumentada y los Sensores Físicos son tecnologías clave 
+                    que permiten crear experiencias inmersivas y mejorar la interacción con datos.
+                    Gracias a estas herramientas, los ingenieros pueden diseñar y simular procesos 
+                    antes de llevarlos a la realidad, reduciendo costos y riesgos.
+                </p>
+                <button class="ver-mas">Ver más</button>
+            </div>
+            <img src="Imagenes/medium-shot-man-wearing-vr-glasses-scaled.jpg" alt="realidad virtual">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="texto-con-boton">
+                <p class="texto-largo">
+                    La realidad aumentada combina el mundo físico con elementos digitales,
+                    permitiendo experiencias inmersivas que enriquecen la interacción.
+                    Esta tecnología se aplica en educación, medicina, industria y
+                    entretenimiento para mejorar la comprensión y la eficiencia.
+                </p>
+                <button class="ver-mas">Ver más</button>
+            </div>
+            <img src="Imagenes/images.jpg" alt="Realidad Aumentada">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="texto-con-boton">
+                <p class="texto-largo">
+                    Entre los beneficios de la realidad aumentada se encuentran:
+                    mejora de la experiencia de usuario, aumento de la motivación en
+                    entornos educativos, reducción de errores en procesos industriales
+                    y optimización de la capacitación profesional.
+                </p>
+                <button class="ver-mas">Ver más</button>
+            </div>
+            <img src="Imagenes/realidad-aumentada-scaled.jpg" alt="Beneficios de la Realidad Aumentada">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
+
+
+
+      
+   
