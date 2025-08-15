@@ -1,216 +1,201 @@
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(120deg, #4d03f9, #0928b5, #4cc9f0);
-            background-size: 400% 400%;
-            animation: gradientBG 20s ease infinite;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-.navbar {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed; 
-    top: 0; 
-    backdrop-filter: blur(12px);
-    margin-bottom: 20px; /* Espacio entre el navbar y el contenido */
-    z-index: 1; /* Agrega esta línea para que el menú esté por encima del contenido */
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-        .navbar a {
-            color: #ffe082; /* Color del texto del navbar */
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background 0.3s;
-        }
-
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left: 0; /* Cambia de 'right' a 'left' */
-    max-height: 300px;
-    overflow-y: auto;
-    border-radius: 10px;
+/* ===== Fuente y fondo degradado 3D ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #3a0ca3, #4361ee, #7209b7);
+    background-size: 400% 400%;
+    animation: gradientAnim 12s ease infinite;
+    color: #fff;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Animacion del fondooo */
-@keyframes gradientBG {
+@keyframes gradientAnim {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Contenedodoras */
-.container, .cuadro {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    backdrop-filter: blur(12px);
-    padding: 25px;
-    max-width: 900px;
-    width: 100%;
-    margin-bottom: 25px;
-    animation: fadeIn 1.5s ease forwards;
-    transform: translateY(20px);
-    opacity: 0;
+/* ===== Barra de navegación ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0 0 15px 15px;
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: bold;
+    border: none; /* Eliminar borde */
 }
 
-h1 {
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Alinear hacia la derecha */
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.15);
+    z-index: 1;
+    border-radius: 8px;
+    color: white;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ===== Contenedor principal ===== */
+.container {
     text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #fff;
+    padding: 2rem;
 }
 
-p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    color: #f0f0f0;
+/* ===== Estilo de cuadros ===== */
+.card,
+.integrante-card,
+.contenido {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover,
+.integrante-card:hover,
+.contenido:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== Integrantes ===== */
+.integrantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* ===== Cards generales ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* ===== Contenido con imagen ===== */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== Estilo unificado para imágenes en todas las tarjetas ===== */
+.card img {
+    width: 200px;           /* Tamaño reducido */
+    height: auto;           /* Mantener proporción */
+    border-radius: 15px;    /* Bordes redondeados */
+    float: left;            /* Texto fluye a la derecha */
+    margin: 0 15px 15px 0;  /* Espaciado */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra */
+}
+
+h2 {
+    text-align: center;
+}
+
+/* ===== Tarjetas con imagen y texto juntos ===== */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+    overflow: hidden; /* Evita que la imagen sobresalga */
     text-align: justify;
 }
 
-/* Estilos para la pagina errores */
-.cuadro {
-    max-width: 280px;
-    min-height: 220px;
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== Texto y botón alineados ===== */
+.texto-con-boton {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.cuadro:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-}
-
-.titulo {
-    font-size: 1.2rem;
-    font-weight: 600;
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 10px;
-    color: #ffe082;
 }
 
-.contenido {
-    font-size: 0.95rem;
-    color: #e3f2fd;
-    text-align: center;
+.texto-largo {
+    flex: 1;
+    overflow: hidden;
+    max-height: 60px;
+    transition: max-height 0.5s ease;
+    text-align: justify;
 }
 
-
-.fecha {
-    text-align: right;
-    font-size: 0.9em;
-    margin-top: 15px;
-    color: #b3e5fc;
+.texto-expandido {
+    max-height: 500px; /* altura cuando se expande */
 }
 
-
-
-body.erroresf-page {
-    flex-direction: column;
-    align-items: center;
+/* ===== Botón "Ver más" ===== */
+.ver-mas {
+    background: #ffe082;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.errores-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 80px; /* Agrega este margen superior */
+.ver-mas:hover {
+    background: #ffca28;
+    transform: scale(1.05);
 }
-
-
-.errores-container .cuadro {
-    flex: 1 1 250px;
-}
-
-        .container {
-            text-align: center;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            margin-top: 20px; /* Espacio entre el navbar y el contenedor */
-            width: 300px;
-        }
-
-        h1 {
-            color: #388e3c;
-            margin-bottom: 20px;
-        }
-
-        .name {
-            background: #e8f5e9;
-            border: 1px solid #c8e6c9;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 10px 0;
-            transition: transform 0.3s;
-        }
-
-        .name:hover {
-            transform: scale(1.05);
-            background: #c8e6c9;
-        }
-
-        
